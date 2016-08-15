@@ -1,5 +1,19 @@
-•Name: Dax Richards
+******************
+* Draft 1 Change *
+******************
 
-•Years at SSA: 11 months 356 days
+Name: Dax Richards
 
-•Description of experience in IT and with Java (if any): Limited experience with Java; Only used in a educational setting/ not professional environment
+Years at SSA: 11 months 356 days
+
+Description of experience in IT and with Java (if any): Limited experience with Java; Only used in a educational setting/ not professional environment
+
+******************
+* Draft 2 Change *
+******************
+
+Favorite Baseball Team: Phillies
+
+Favorite Football Team: Eagles
+
+Favorite Basketball Team: 76ers
