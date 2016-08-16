@@ -7,7 +7,7 @@ public class RollDice {
 	
 	
 	public int roll(){
-		
+		//This method will simulate the rolling of the dice 
 		int total = 0;
 		int rand = 0;
 		
@@ -30,7 +30,7 @@ public class RollDice {
 	
 	
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		// This creates an instance of the RollDice Class 
       RollDice firsTry = new RollDice();
       
       
