@@ -8,7 +8,7 @@ public class RollDice {
 	
 	public int roll(){
 		
-		//This method will use a while loop to generate a series of random numbers to be totalled, until which point a #1 is generated and the loop is exited.
+		//This wonderful method will use a while loop to generate a series of random numbers to be totalled, until which point a #1 is generated and the loop is exited.
 		
 		
 		int total = 0;
