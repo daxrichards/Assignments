@@ -39,24 +39,51 @@ public class SimpleCraps {
 		//Purpose of this method is to simulate a subsequent roll of the dice in those cases where a "Point" value is applicable
 		int dice1;
 		int dice2;
+		int rollCnt = 0;
 		int subSpinTotal;
 		
 		//The dice will be rolled multiple times until the subSpinTotal = 7 (loss) or subSpinTotal = Point (win)
 		do{
+			rollCnt++;
 		dice1 = (int) java.lang.Math.ceil(java.lang.Math.random()*6);
 		dice2 = (int) java.lang.Math.ceil(java.lang.Math.random()*6);
-	    		
+		
+	    System.out.println("\nThis is attempt " + rollCnt + " to match the Point Value: " + thePoint);	
+	    
+	    System.out.println("dice1 = " + dice1);
+		System.out.println("dice2 = " + dice2);
+		System.out.println("--------" );
+		
+		
 		subSpinTotal = dice1 + dice2;
+		System.out.println(subSpinTotal + " <--Total from attempt " +rollCnt );
 		
 		}while(subSpinTotal != 7 && subSpinTotal != thePoint );
 		
 		
 		if(subSpinTotal == thePoint){
-			System.out.println("You are a winner.  The point was "+ thePoint + " and you spun a(n) " + thePoint);
+			if(thePoint < 10){
+			//System.out.println("\n");
+			System.out.println("*********************************************************");
+			System.out.println("**                  You are a winner                   **");
+			System.out.println("**       The point was "+ thePoint + " and you spun a(n) " + thePoint + "           **");
+			System.out.println("**              It took you " +rollCnt+ " attempt(s)               **");
+			System.out.println("*********************************************************");
 			wins++;
+			}
+			else{
+			//System.out.println("\n");
+			System.out.println("*********************************************************");
+			System.out.println("**                  You are a winner                   **");
+			System.out.println("**       The point was "+ thePoint + " and you spun a(n) " + thePoint + "         **");
+			System.out.println("**               It took you " +rollCnt+ " attempt(s)              **");
+			System.out.println("*********************************************************");
+			wins++;
+				
+			}
 		}
 		else if(subSpinTotal == 7){
-			System.out.println("You spun a " + subSpinTotal + " in your subsequent spin, so you lost");
+			System.out.println("You spun a " + subSpinTotal + " in attempt " + rollCnt +" so you lost");
 			losses++;
 		}
 		
@@ -102,11 +129,14 @@ public class SimpleCraps {
 		
 		
 	//*Extra Credit*- For Loop added to run the game more than 100 times and track wins/losses
-	for(int i= 0; i<200; i = wins + losses){
+	for(int i= 0; i<150; i = wins + losses){
+		
 		System.out.println("\n");
 		System.out.println("*********************");
-		System.out.println("**    GAME " + (i+1) +"      **");
+		System.out.println("    GAME " + (i+1) +"     ");
 		System.out.println("*********************");
+		
+		
 		//Assigning a value to the "Point"		
 		pointValue = throwDice.evalRoll(throwDice.roll());
 		
@@ -120,13 +150,15 @@ public class SimpleCraps {
 				throwDice.rollAgain(pointValue);
 			}
 		dispCounter++;
+		
+		
     
 	}	
 	//Display the results for readability
 	System.out.println("\n");
 	System.out.println("*********************************************************");
 	System.out.println("**        You played "+ dispCounter +" games.  Your results are:     **");
-	System.out.println("**                 WINS: " + wins + " Losses " + losses   +"                  **");
+	System.out.println("                 WINS: " + wins + " Losses " + losses   +"                 ");
 	System.out.println("**                                                     **");
 	System.out.println("*********************************************************");
 	
