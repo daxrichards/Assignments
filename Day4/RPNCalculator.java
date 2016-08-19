@@ -15,7 +15,8 @@ public class RPNCalculator {
 		int answer = 0;
 		
 		//*****************PLEASE INSERT TEST CODE BELOW*******************************//
-		char[] rpnExpression = new char[] { '1', '2', '+' };
+		//char[] rpnExpression = new char[] { '1', '2', '+' };
+		char[] rpnExpression = new char[] {'8', '2', '/', '9', '*', '1', '-', '7', '/'};
      
 		//Stack object defined
 		Stack<Integer> stack = new Stack<Integer>();
@@ -40,7 +41,7 @@ public class RPNCalculator {
 					stack.push(answer);
 					break;
 				case '-':
-					answer = firstPop - secPop;
+					answer = secPop - firstPop;
 					stack.push(answer);
 					break;
 				case '*':
@@ -48,7 +49,7 @@ public class RPNCalculator {
 					stack.push(answer);
 					break;
 				case '/':
-					answer = firstPop / secPop;
+					answer = secPop / firstPop;
 					stack.push(answer);
 					break;
 
