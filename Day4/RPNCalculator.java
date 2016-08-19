@@ -62,7 +62,7 @@ package ssa;
  					break; 
  			//This code can handle the modulus operator
  				case '%': 
- 					answer = secPop / firstPop; 
+ 					answer = secPop % firstPop; 
  					stack.push(answer); 
  					break; 
  				} 
