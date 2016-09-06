@@ -1,0 +1,213 @@
+*************************
+*************************
+*    MySQL: Part 1      *
+*************************
+*************************
+
+mysql> select first_name,last_name from student;
+
++------------+-----------+
+| first_name | last_name |
++------------+-----------+
+| Eric       | Ephram    |
+| Greg       | Gould     |
+| Adam       | Ant       |
+| Howard     | Hess      |
+| Charles    | Caldwell  |
+| James      | Joyce     |
+| Doug       | Dumas     |
+| Kevin      | Kraft     |
+| Frank      | Fountain  |
+| Brian      | Biggs     |
++------------+-----------+
+10 rows in set (0.00 sec)
+
+
+
+*************************
+*************************
+*    MySQL: Part 2      *
+*************************
+*************************
+
+
+
+mysql> select * from student where years_of_experience < 8;
++-----+------------+-----------+---------------------+------------+
+| id  | first_name | last_name | years_of_experience | start_date |
++-----+------------+-----------+---------------------+------------+
+| 100 | Eric       | Ephram    |                   2 | 2016-03-31 |
+| 110 | Greg       | Gould     |                   6 | 2016-09-30 |
+| 120 | Adam       | Ant       |                   5 | 2016-06-02 |
+| 130 | Howard     | Hess      |                   1 | 2016-02-28 |
+| 140 | Charles    | Caldwell  |                   7 | 2016-05-07 |
+| 170 | Kevin      | Kraft     |                   3 | 2016-04-15 |
+| 190 | Brian      | Biggs     |                   4 | 2015-12-25 |
++-----+------------+-----------+---------------------+------------+
+7 rows in set (0.00 sec)
+
+
+
+*************************
+*************************
+*    MySQL: Part 3      *
+*************************
+*************************
+
+
+mysql> select last_name, start_date, id from student order by last_name;
++-----------+------------+-----+
+| last_name | start_date | id  |
++-----------+------------+-----+
+| Ant       | 2016-06-02 | 120 |
+| Biggs     | 2015-12-25 | 190 |
+| Caldwell  | 2016-05-07 | 140 |
+| Dumas     | 2016-07-04 | 160 |
+| Ephram    | 2016-03-31 | 100 |
+| Fountain  | 2016-01-31 | 180 |
+| Gould     | 2016-09-30 | 110 |
+| Hess      | 2016-02-28 | 130 |
+| Joyce     | 2016-08-27 | 150 |
+| Kraft     | 2016-04-15 | 170 |
++-----------+------------+-----+
+10 rows in set (0.00 sec)
+
+
+*************************
+*************************
+*    MySQL: Part 4      *
+*************************
+*************************
+
+
+mysql> select * from student where first_name = 'Frank' or
+    -> first_name = 'James' or
+    -> first_name = 'Adam' order by last_name desc;
+   
++-----+------------+-----------+---------------------+------------+
+| id  | first_name | last_name | years_of_experience | start_date |
++-----+------------+-----------+---------------------+------------+
+| 150 | James      | Joyce     |                   9 | 2016-08-27 |
+| 180 | Frank      | Fountain  |                   8 | 2016-01-31 |
+| 120 | Adam       | Ant       |                   5 | 2016-06-02 |
++-----+------------+-----------+---------------------+------------+
+3 rows in set (0.02 sec)
+
+
+*************************
+*************************
+*    MySQL: Part 5      *
+*************************
+*************************
+
+mysql> select first_name, last_name, start_date from student
+    -> where(start_date Between '2016-01-31' and '2016-06-30');
++------------+-----------+------------+
+| first_name | last_name | start_date |
++------------+-----------+------------+
+| Eric       | Ephram    | 2016-03-31 |
+| Adam       | Ant       | 2016-06-02 |
+| Howard     | Hess      | 2016-02-28 |
+| Charles    | Caldwell  | 2016-05-07 |
+| Kevin      | Kraft     | 2016-04-15 |
+| Frank      | Fountain  | 2016-01-31 |
++------------+-----------+------------+
+6 rows in set (0.00 sec)
+
+
+******************************
+******************************
+*    Advanced    Part1       *
+******************************
+******************************
+
+mysql> alter table assignment add foreign key(grade_id) references grade(grade_id);
+Query OK, 5 rows affected (0.84 sec)
+Records: 5  Duplicates: 0  Warnings: 0
+
+mysql> explain assignment;
++----------------+---------+------+-----+---------+-------+
+| Field          | Type    | Null | Key | Default | Extra |
++----------------+---------+------+-----+---------+-------+
+| id             | int(11) | NO   | PRI | NULL    |       |
+| student_id     | int(11) | NO   | MUL | NULL    |       |
+| assignment_nbr | int(11) | NO   |     | NULL    |       |
+| grade_id       | int(11) | YES  | MUL | NULL    |       |
++----------------+---------+------+-----+---------+-------+
+4 rows in set (0.01 sec)
+
+
+******************************
+******************************
+*    Advanced    Part2       *
+******************************
+******************************
+
+
+mysql> select * from assignment;
++-----+------------+----------------+----------+
+| id  | student_id | assignment_nbr | grade_id |
++-----+------------+----------------+----------+
+| 994 |        140 |           1000 |        4 |
+| 995 |        190 |           1000 |        0 |
+| 996 |        170 |           1200 |        3 |
+| 997 |        120 |           1200 |        3 |
+| 998 |        110 |           1100 |        4 |
++-----+------------+----------------+----------+
+5 rows in set (0.00 sec)
+
+
+
+******************************
+******************************
+*    Advanced    Part3       *
+******************************
+******************************
+
+
+mysql> explain grade;
++-------------+-------------+------+-----+---------+-------+
+| Field       | Type        | Null | Key | Default | Extra |
++-------------+-------------+------+-----+---------+-------+
+| grade_id    | int(11)     | NO   | PRI | NULL    |       |
+| grade_value | varchar(30) | YES  |     | NULL    |       |
++-------------+-------------+------+-----+---------+-------+
+2 rows in set (0.02 sec)
+
+
+******************************
+******************************
+*    Advanced    Part4       *
+******************************
+******************************
+
+mysql> select * from grade;
++----------+-----------------------------+
+| grade_id | grade_value                 |
++----------+-----------------------------+
+|        0 | Not Graded                  |
+|        1 | Incomplete                  |
+|        2 | Complete and Unsatisfactory |
+|        3 | Complete and satisfactory   |
+|        4 | Exceeds Expectations        |
++----------+-----------------------------+
+5 rows in set (0.00 sec)
+
+
+******************************
+******************************
+*        Pro Challenge       *
+******************************
+******************************
+
+mysql> alter table assignment add constraint foreign key (student_id) references
+ student(id);
+Query OK, 5 rows affected (0.95 sec)
+Records: 5  Duplicates: 0  Warnings: 0
+
+
+mysql> insert assignment (id, student_id, assignment_nbr, grade_id) values (99,8
+888,101,1);
+ERROR 1452 (23000): Cannot add or update a child row: a foreign key constraint f
+ails (`tiy`.`assignment`, CONSTRAINT `assignment_ibfk_1` FOREIGN KEY (`student_i
+d`) REFERENCES `student` (`id`))
