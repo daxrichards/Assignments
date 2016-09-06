@@ -100,16 +100,16 @@ mysql> select * from student where first_name = 'Frank' or
 *************************
 *************************
 
-mysql> select first_name, last_name, start_date from student
-    -> where(start_date Between '2016-01-31' and '2016-06-30');
+mysql> select first_name, last_name, start_date from student where(start_date
+ Between '2016-01-31' and '2016-06-30') order by start_date desc;
 +------------+-----------+------------+
 | first_name | last_name | start_date |
 +------------+-----------+------------+
-| Eric       | Ephram    | 2016-03-31 |
 | Adam       | Ant       | 2016-06-02 |
-| Howard     | Hess      | 2016-02-28 |
 | Charles    | Caldwell  | 2016-05-07 |
 | Kevin      | Kraft     | 2016-04-15 |
+| Eric       | Ephram    | 2016-03-31 |
+| Howard     | Hess      | 2016-02-28 |
 | Frank      | Fountain  | 2016-01-31 |
 +------------+-----------+------------+
 6 rows in set (0.00 sec)
