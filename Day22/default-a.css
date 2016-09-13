@@ -1,0 +1,141 @@
+
+
+
+body{
+
+    background-image: url("http://cdn.wallpapersafari.com/49/14/kUIlhE.jpg");
+    background-repeat: no-repeat;
+    background-size: cover
+     }
+
+table { width:50%; 
+        
+        border-collapse: collapse;
+        font-size: 17px;
+        
+       }
+
+tr:nth-child(even){background-color:#E0F2F7
+       }
+
+
+
+tr{  border-top: 2px dotted grey;
+     border-bottom: 2px dotted grey;
+     height: 50px}
+
+td{  
+     text-align: center;}
+
+
+p { font-style: italic;
+    color: green;
+    font-weight: bold;
+}
+
+
+
+
+h1 { margin-left: 4%;
+color:blue;
+
+     font-weight: bold;
+   }
+
+
+h3 { 
+     
+margin-left: 4%;
+color:blue; 
+     font-weight: bold;
+   
+   }
+
+
+.col1{ 
+        width : 30%;
+        font-weight: bold;
+
+
+}
+
+.col2{ width: 15% }
+
+
+
+.col3{     
+        width : 30%;
+          color: red;
+     
+   
+}
+
+
+.col4{  width : 25%;
+
+font-style: italic;
+
+}
+
+
+li{ 
+
+    font-size: 20px;
+    font-style: italic; }
+
+th{
+text-align:center;
+background-color: green;
+color: black;
+   font-size: 20px;
+}
+
+
+td{
+  }
+
+
+div{
+border: 20px groove red ;
+margin-left: 4%;
+ width:42%;
+ font-size: 20px;
+ display:inline-block;
+ text-align: center;
+background-color: white;
+
+ }
+
+footer { 
+         
+          background-color: black;
+         color:silver;
+         font-style: italic;
+         text-align:center;
+
+}
+
+
+.rotate {   
+
+/* Safari */
+-webkit-transform: rotate(-45deg);
+
+/* Firefox */
+-moz-transform: rotate(-45deg);
+
+/* IE */
+-ms-transform: rotate(-45deg);
+
+/* Opera */
+-o-transform: rotate(-45deg);
+
+/* Internet Explorer */
+filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+
+font-weight: bold;
+
+
+
+
+}
