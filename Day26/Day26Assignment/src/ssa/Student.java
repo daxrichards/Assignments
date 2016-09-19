@@ -3,11 +3,12 @@ package ssa;
 import java.sql.*;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.List;
 import java.sql.*;
 
 public class Student extends dbaActions {
 	
-	public int id;
+	public int id ;
 	public String first;
 	public String last;
 	public double gpa;
@@ -37,7 +38,7 @@ public class Student extends dbaActions {
 
 
 	/**
-	 * @param gpa the gpa to set
+	 * @param gpa the gpa to setQ
 	 */
 	public void setGpa(double gpa) {
 		this.gpa = gpa;
@@ -52,52 +53,85 @@ public class Student extends dbaActions {
 	}
 
 
-	public Student(){}
+	public Student(){
+		
+	}
 	
 	
 	//Method to formulate select statement to extract one student from the database
-	public void getById(int id) throws SQLException{
-		Student student1 = new Student();
+	public Student getById(int id) throws SQLException {
 		
-		try{
+		ArrayList<Student> students = new ArrayList<Student>();
+		
+	     
+		
 			
-			student1.select("Select * from student where id =" + id + " limit 1" );
+			students = select("Select * from student where id = " + id);
 			
-		}
-		catch(Exception ex){
-			ex.printStackTrace();
-		}
+			return students.get(0);
 	}
     
 	//Method to extract all students from the database
-	public void getAll() throws SQLException{
-		Student student1 = new Student();
+	public ArrayList<Student> getAll() throws SQLException{
+		ArrayList<Student> student = new ArrayList<Student>();
 		
-		try{
-			
-			student1.select("Select * from student"); 
-		}
-		catch(Exception ex){
-			ex.printStackTrace();
-		}
+		
+			return student = select("Select * from student"); 
+		
 	}
 
 //Custom select statement is used to create the ResultSet object to display query results
-public void select(String sql) throws SQLException{
-	Student student = new Student();
-	
-		
+public ArrayList<Student> select(String sql) throws SQLException{
+	   Student student = new Student();
+	   
+		ArrayList<Student> students = new ArrayList<Student>();
 	try{
 		ResultSet rs =student.executeQuery(sql);
 		
-	while (rs.next())
-	{ display(rs);
+		while(rs.next()){
+		student = student.createStudent(rs);
+		students.add(student);
+		}
 		
-	}
-
+		
+	
+ 
 }catch(Exception ex){
 }
-
+	   return students;
 
 }
+
+
+public Student createStudent(ResultSet rs){
+	
+	Student student = new Student();
+	try{
+	        student.id = rs.getInt("id");
+		    student.first = rs.getString("first_name");
+			student.last = rs.getString("last_name");
+			student.gpa = rs.getDouble("gpa");
+		student.sat = rs.getInt("sat");	
+		
+	
+	}catch(Exception ex)
+	{ ex.printStackTrace();
+	}
+	return student;
+}
+@Override
+public String toString(){
+	
+		
+			String msg = String.format("\n%d %8s %8s %10.2f %5d",
+			this.id,
+		    this.first,
+			this.last,
+			this.gpa,
+			this.sat);
+			
+		
+		return msg;
+}
+
 }

@@ -12,16 +12,24 @@ public class Mainline {
 	public static void main(String[] args) {
    try{
 
-		Student student = new Student();
+		Student aStudent = new Student();
 		
 		
-	   student.getById(100);
+	   aStudent = aStudent.getById(100);
+	   System.out.println(aStudent);
+	   
+	   
 	   System.out.println("\n\n**********************************************************************");
 	   System.out.println("**********************************************************************");
 	   System.out.println("**********************************************************************\n");
-	    student .getAll();
+	   
+	   ArrayList<Student> allStudents = aStudent.getAll();
+	   
+	   for(Student student: allStudents){
+		   System.out.println(student);
+	   }
 	 
-	    
+
 	}catch(Exception ex)
    {
 		ex.printStackTrace();

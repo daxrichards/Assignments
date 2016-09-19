@@ -58,12 +58,6 @@ public class dbaActions {
 		return	rs = stmt.executeQuery(sql);
 	}
 	
-   //Method to format the results
-	public void display(ResultSet rs) throws SQLException {
-
-		System.out.format("\n%d %8s %8s %10.2f %5d", rs.getInt("id"), rs.getString("first_name"), rs.getString("last_name"),
-				rs.getDouble("gpa"), rs.getInt("sat"));
-	}
 
 	public void close(Connection conn, Statement stmt, ResultSet rs) throws SQLException {
 
