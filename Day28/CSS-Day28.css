@@ -1,0 +1,85 @@
+header{  
+
+        margin-top:0%;
+		margin-right:0%;
+        height: 170px;
+        text-align: center;
+		background-color: yellow;
+		color:black;
+		font-size: 70px;
+		background-image:url("https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRMW-iZjE3XNu0wEKaROos88e4N3Gjn5qiMA3If3DiHXRVARc5v");
+		background-repeat: no-repeat;
+    background-size: cover;
+	
+	
+    
+}
+
+
+body{
+	   margin-left:0px;
+	   margin-top:0%;
+	   background-image:url("https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTsqeKXsCloEwLLpDLBoLvsqu-IV9UrlYZfs3rSTj0RgyKE_s0Z");
+	  
+	   background-repeat: no-repeat;
+    background-size: cover;
+	
+	 
+}
+
+.margin{
+	    margin-left:0%;
+		width:30%;
+		height:1000px;
+       background-image:url("https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRugQrfTt1mlXpLoqzgtB3G_KLQAPXdeiw2fJJjrdQRB0FpWIIw");
+	   background-repeat: no repeat;
+	   background-size:cover;
+	
+	
+}
+
+tr{ vertical-align:top;}
+
+td{ vertical-align: top;}
+
+
+.display{
+	     width:370px;
+		 font-size: 70px;
+         text-align:center;
+	     height: 100px;
+		
+}
+
+button{
+         width:230px;
+	     height: 105px;
+		 font-size:70px; 
+		
+}
+
+
+#right{ width:42%;
+        
+		border: 7px solid black;
+	    
+	 
+	
+	
+}
+
+.above8{
+	
+	color:red;
+}
+
+ #left{ width:58%; 
+       height:100%;
+	display:inline-block;
+	border: 7px solid black;
+	background-image: url("https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSEgUbs3yUSqltjhR-cUdZMzAy7DRw3zGTdGQhc8MtZWYIBmUSv");
+    background-repeat: no-repeat;
+    background-size: cover;
+	
+}
+
