@@ -1,0 +1,54 @@
+
+	
+#channels{
+	margin-left: 0%;
+	font-size: 70px;
+}
+
+
+
+
+.hl{
+	color:red;
+}
+#bots{}
+
+
+div{   
+   background-color:#B1A6F6;
+   
+background-repeat: no-repeat;
+    background-size: cover;
+   margin-top:10%;
+      width:100%;
+      border: 7px groove pink;
+      }
+	
+	
+#outer{
+	
+	margin-left:25%;
+}
+
+#textbox{margin-left:5%;}
+
+button{margin-top:5%;
+      margin-left:30%;
+      height:27px;
+	  width:170px;
+	  font-size:20px;
+}
+
+
+
+.radio2 + label::before {
+    width: 2.75em;
+    height: 2.75em;
+}
+
+
+body{
+	background-image:url("https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTfABA9IxraDql8ZgZ8to_gYW7Y3Ny_cpNIXhlW9i3GVcUQBawvYQ");
+	background-repeat: no-repeat;
+    background-size: cover;
+}
