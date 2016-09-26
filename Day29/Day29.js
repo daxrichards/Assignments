@@ -4,7 +4,7 @@ $(document).ready(function(){
 
 
 
-var token = "xoxp-63743851541-69469939616-82835070677-8d88efc7f3fbb646ddeb9abcb6bb2e23";
+var token = "xoxp-63743851541";
 
 
 
