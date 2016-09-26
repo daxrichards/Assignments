@@ -11,28 +11,17 @@ public class MainLine {
 
 	public static void main(String[] args) {
 		
+	CreateMajor major = new CreateMajor();
 	
-		//Creating session factory to make connection to database
-		SessionFactory factory = new Configuration().configure("hibernate.cfg.xml")
-	            .addAnnotatedClass(CreateMajor.class)
-	            .buildSessionFactory();
-
-		Session session = factory.getCurrentSession();
-	 
-	    CreateMajor major = new CreateMajor();
+	
 	   
-	   try{
-	   
-	     //major.insertMajor(session, "Baseball",1470);
-	    //major.update(session,"Surfing",18);
-	   //major.delete(session,18);
-	  major.displayAllMajors(session);
+	   //major.insertMajor("Baseball",1490);
+	   //major.update("ballroom",17);
+	   //major.delete(17);
+	  major.displayAllMajors();
 	 
 	    
-	   }catch(Exception ex){
-		}finally{
-			factory.close();
-		}
+	  
 	    
 	    
 	}

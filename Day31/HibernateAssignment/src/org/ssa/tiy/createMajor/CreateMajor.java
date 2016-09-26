@@ -112,56 +112,74 @@ public class CreateMajor {
 	}
     
 
-	public static void insertMajor(Session session, String description, int req_sat ){
+	public static void insertMajor(String description, int req_sat ){
 	
 		
+		   connect();
+		try{
 			CreateMajor  major = new CreateMajor(description, req_sat);
             
 			
-		    session.beginTransaction();
+		    getSession().beginTransaction();
 			  
-			session.save(major);
+		    getSession().save(major);
 			
-			session.getTransaction().commit();
+		    getSession().getTransaction().commit();
 			
-		
+	 }catch(Exception ex){
+		}finally{
+			getFactory().close();
+		}
 	   
 	}
 
-	public static void update(Session session, String descrip, int id){
+	public static void update(String descrip, int id){
 		
+		connect();
 		CreateMajor  major = new CreateMajor();
-		
-		session.beginTransaction();
-		major= session.get(CreateMajor.class, id);
+		try{
+		getSession().beginTransaction();
+		major= getSession().get(CreateMajor.class, id);
 		major.setDescription(descrip);
-		session.getTransaction().commit();
-		
+		getSession().getTransaction().commit();
+		}catch(Exception ex){
+		}finally{
+			getFactory().close();
+		}
 		
 
 }
 	
-public static void delete(Session session, int id){
+public static void delete(int id){
+	connect();
 	CreateMajor  major = new CreateMajor();
-	
-	session.beginTransaction();
-	session.createQuery("delete CreateMajor where id=" + id).executeUpdate();
-	session.getTransaction().commit();
-	   
+	try{
+	getSession().beginTransaction();
+	getSession().createQuery("delete CreateMajor where id=" + id).executeUpdate();
+	getSession().getTransaction().commit();
+	}catch(Exception ex){
+	}finally{
+		getFactory().close();
+	}   
 	  
 }
-public static void displayAllMajors(Session session){
+public static void displayAllMajors(){
 	
-	session.beginTransaction();
-	List<CreateMajor> majors= session.createQuery("from CreateMajor").list();
+	connect();
+	try{
+	getSession().beginTransaction();
+	List<CreateMajor> majors= getSession().createQuery("from CreateMajor").list();
 	
 	//display all students
 	for(CreateMajor sub: majors)
 		System.out.println(sub.getDescription());
 	
 	
-	session.getTransaction().commit();
-	
+	getSession().getTransaction().commit();
+	}catch(Exception ex){
+	}finally{
+		getFactory().close();
+	}
 	
 }
 public static void connect(){
