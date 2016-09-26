@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
+	<classpathentry kind="lib" path="/SampleHibernate/lib/antlr-2.7.7.jar"/>
+	<classpathentry kind="lib" path="/SampleHibernate/lib/dom4j-1.6.1.jar"/>
+	<classpathentry kind="lib" path="/SampleHibernate/lib/geronimo-jta_1.1_spec-1.1.1.jar"/>
+	<classpathentry kind="lib" path="/SampleHibernate/lib/hibernate-commons-annotations-5.0.1.Final.jar"/>
+	<classpathentry kind="lib" path="/SampleHibernate/lib/hibernate-core-5.0.11.Final.jar"/>
+	<classpathentry kind="lib" path="/SampleHibernate/lib/hibernate-entitymanager-5.0.11.Final.jar"/>
+	<classpathentry kind="lib" path="/SampleHibernate/lib/hibernate-java8-5.0.11.Final.jar"/>
+	<classpathentry kind="lib" path="/SampleHibernate/lib/hibernate-jpa-2.1-api-1.0.0.Final.jar"/>
+	<classpathentry kind="lib" path="/SampleHibernate/lib/jandex-2.0.0.Final.jar"/>
+	<classpathentry kind="lib" path="/SampleHibernate/lib/javassist-3.18.1-GA.jar"/>
+	<classpathentry kind="lib" path="/SampleHibernate/lib/jboss-logging-3.3.0.Final.jar"/>
+	<classpathentry kind="lib" path="/SampleHibernate/lib/mysql-connector-java-5.1.39-bin.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

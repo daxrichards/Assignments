@@ -20,6 +20,8 @@ tr:nth-child(even){background-color:#E0F2F7
 
 
 
+
+h2 { color:red; }
 tr{  border-top: 2px dotted grey;
      border-bottom: 2px dotted grey;
      height: 50px}

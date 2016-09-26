@@ -1,11 +1,25 @@
+img{ 
+     animation: 7.0s rotateRight infinite linear; 
+	 
+}
 
+#top{
+	position: absolute;
+ top: 20%;
+ left: 52%;
+ margin: -50px auto 0;
+}
+@keyframes rotateRight{
+    0%{ transform:rotate(0deg); transform-origin:50% 50%; }
+    100%{ transform:rotate(360deg); }
+}
 	
 #channels{
 	margin-left: 0%;
 	font-size: 70px;
 }
 
-
+#imgcol {left-margin:20%;}
 
 
 .hl{
@@ -48,7 +62,9 @@ button{margin-top:5%;
 
 
 body{
-	background-image:url("https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTfABA9IxraDql8ZgZ8to_gYW7Y3Ny_cpNIXhlW9i3GVcUQBawvYQ");
+	/*background-image:url("https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTfABA9IxraDql8ZgZ8to_gYW7Y3Ny_cpNIXhlW9i3GVcUQBawvYQ");*/
+	background-image:url("https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQ9Go875up13xzwsLIBUhRacaHyQ4FbfQTMPJAgODq-jWfYzPQG6A");
 	background-repeat: no-repeat;
     background-size: cover;
 }
+
