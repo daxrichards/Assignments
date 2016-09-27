@@ -15,10 +15,10 @@ public class MainLine {
 	
 	
 	   
-	   //major.insertMajor("Baseball",1490);
-	   //major.update("ballroom",17);
-	   //major.delete(17);
-	  major.displayAllMajors();
+	 major.insertMajor("Puppeteering",1500);
+	 major.update("Break Dancing",19);
+	 major.delete(22);
+	 major.displayAllMajors();
 	 
 	    
 	  

@@ -141,6 +141,7 @@ public class CreateMajor {
 		getSession().beginTransaction();
 		major= getSession().get(CreateMajor.class, id);
 		major.setDescription(descrip);
+		//getSession().createQuery("update CreateMajor set description="+descrip+"id="+id).executeUpdate();
 		getSession().getTransaction().commit();
 		}catch(Exception ex){
 		}finally{
