@@ -1,21 +1,15 @@
 
-
 $(document).ready(function(){
 
+var token = getSlackToken();
+
+//var token = "xoxp-63743851541-69469939616-84593080547-107104a53c95d6eab4c55a0808ca2dd2";
 
 
-var token = "xoxp-63743851541";
 
-
-
-//var token= getSlackToken();
-
-
-   
-   
-   
    
 	$.ajax("https://slack.com/api/channels.list?",{
+		
 			method: "POST",
 			data: {
 				token: token
@@ -41,21 +35,21 @@ var token = "xoxp-63743851541";
 	
 	 
 	 $("button").click(function(){
-		 
-		 
+		  
+		             
 		 var radio = $("input[name=chatroom]:checked").val();
 		
 		var msg = $("#textbox").val();
 		
-		// var token= getSlackToken();
-		 $.ajax("https://slack.com/api/chat.postMessage?", {
+		  $.ajax("https://slack.com/api/chat.postMessage?", {
+			
 			method: "POST" ,
 			data:{
 				token: token,
 				channel: radio,
 				text: msg,
-				username: "Good Job"
-				//icon_emoji: ":upside_down_face:"
+				username: "Message Sent",
+				icon_emoji: ":robot_face:"
 			}
 			
 
@@ -63,6 +57,8 @@ var token = "xoxp-63743851541";
 			}).then(function(result) {
 			console.log(result);
 			$("#textbox").val("");
+		    $("img").addClass("spin");
+			
 	 		 
 	  });
  
