@@ -1,0 +1,19 @@
+header{
+	
+	
+	border-bottom: 30px groove grey;
+	font-size:200px;
+	vertical-align:top;
+	
+	
+}
+#list{
+	
+	padding-left:-300px;
+	font-size:30px;
+}
+
+
+table{ width:27%;
+      align-center;
+	  margin-left:30%}

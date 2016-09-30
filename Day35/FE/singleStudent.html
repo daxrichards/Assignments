@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="stubies.css">
+	
+	<script src="http://code.jquery.com/jquery-3.1.0.min.js"></script>
+	
+	<script type="text/javascript">
+
+		$(document).ready(function() {
+		
+		
+		var first = getUrlVars()["id"];
+        var second = getUrlVars()["page"];
+		var url = "http://localhost:8080/student/" + first;
+		  console.log(url)
+          console.log(first);     
+	
+	$.ajax({
+        		url: url
+			}).then(function(result) {
+				console.log(result);
+			    console.log(result.first_name + "is me")    
+			
+			var item = $("<tr><td>" + result.first_name + "</td><td>" + result.last_name + "</td><td>" + result.sat + "</td><td>" + result.gpa.toFixed(2) + "</td></tr>");
+                                <!--  <a href="url">link text</a> result[i].first_name + " " + result[i].last_name -->
+        
+      $("#list").append( item );
+	  
+	     			<!-- console.log(result);-->
+
+				});
+
+
+		<!-- end ready -->
+});
+		
+function getUrlVars() {
+var vars = {};
+var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+vars[key] = value;
+});
+return vars;
+}		
+	</script>
+	<header><img src= "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtDeucZSSAJg-yK7d_DZF_6XvjLq7B6Eh1ygeSYoaAQc6bCnD4" /> &nbsp Student List</header>
+</head>
+<body>
+<table  id="list"  >
+</table>
+
+<button type="button" class="btn btn-default btn-lg">
+  <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Star
+  
+  
+</button>
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Consuming REST web service in Javascript</title>
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="stubies.css">
+	
+	<script src="http://code.jquery.com/jquery-3.1.0.min.js"></script>
+	
+	<script type="text/javascript">
+
+		$(document).ready(function() {
+
+			$.ajax({
+        		url: "http://localhost:8080/student"
+    		}).then(function(data) {
+			
+			for (var i=0; i < data.length; i++) {
+			var fullname = data[i].first_name + " " + data[i].last_name;
+			var urlId = "http://localhost:8080/student" ;
+            var id = data[i].id;
+            var item = $("<tr><td>" + "<a href='singleStudent.html?id=" + data[i].id +"'>" + fullname + "</a>" + "</td><td>" + data[i].sat + "</td><td>" + data[i].gpa.toFixed(2) + "</td></tr>");
+                                <!--  <a href="url">link text</a> data[i].first_name + " " + data[i].last_name -->
+        
+      $("#list").append( item );
+	  
+	 }
+    			<!-- console.log(data);-->
+
+				});
+
+
+		}); <!-- end ready -->
+
+	</script>
+	<header><img src= "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtDeucZSSAJg-yK7d_DZF_6XvjLq7B6Eh1ygeSYoaAQc6bCnD4" /> &nbsp Student List</header>
+</head>
+<body>
+<table  id="list"  >
+</table>
+
+
+
+</body>
+</html>
