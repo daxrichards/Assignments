@@ -13,7 +13,7 @@ angular.module("AppMode", [])
 	  self.students = [
 	 
 	 
-{"id":110,"firstname":"Greg","lastname":"Gould","gpa":2.5,"sat":1100,"majorid":null, vis: true},
+{"id":110,"firstname":"Gary","lastname":"Gould","gpa":2.5,"sat":1100,"majorid":null, vis: true},
 {"id":120,"firstname":"Adam","lastname":"Ant","gpa":3.2,"sat":1300,"majorid":null, vis: true},
 {"id":130,"firstname":"Howard","lastname":"Hess","gpa":3.7,"sat":1600,"majorid":4, vis: true},
 {"id":140,"firstname":"Charles","lastname":"Caldwell","gpa":2.1,"sat":900,"majorid":null, vis: true},
