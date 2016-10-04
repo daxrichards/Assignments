@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html ng-app="AppMode">
+<head>
+<meta charset="UTF-8">
+<title>Angular Demo</title>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+<script src="http://code.jquery.com/jquery-3.1.0.min.js" type="text/javascript"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js" type="text/javascript"></script>
+
+<script src="Day36Angular.js" type="text/javascript"></script>
+<link rel="stylesheet" type="text/css" href="angularcss.css">
+</head>
+<body ng-controller="AppCtrl as ctrl">
+<!-- <h1>Angular controller is {{ctrl.about}} </h1> -->
+<!-- <h3>Angular controller is <span ng-bind="ctrl.about" /> </h3> -->
+
+<h2 >Student List using Angular  </h2> 
+
+
+</p>
+
+ <table   ng-repeat = "student in ctrl.students">
+    <tr class="", ng-show="student.vis"  >
+		
+		<td  >{{student.firstname}}</td>
+		<td  >{{student.id}}</td>  
+		<td  >{{student.firstname}}</td>
+		<td  >{{student.lastname}}</td>
+		<td  >{{student.gpa}}</td>
+		<td  >{{student.majorid}}</td>
+		<td><button type ="button" class ="btn btn-success btn-default", ng-click="ctrl.hideStudent(student.id)", >HIDE</button></td>
+		
+	</tr>
+ </table>
+
+<br>	<button type ="button" style="margin-left:15%", class ="btn btn-warning btn-lg", ng-click="ctrl.resetStudent()">RESET</button>
+ 
+</body
+</html>
