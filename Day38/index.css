@@ -1,0 +1,91 @@
+﻿body {
+	font: normal normal normal 12px/14.4px; 
+	border:0; margin:0; padding:0;
+}
+div#allpage {
+	margin: 10px;
+	border: 1px solid silver;
+	background-color: lightyellow;
+}
+	
+div#header {
+	border: 1px solid silver;
+	background-color: lightgreen;
+}
+div#menu ul {
+	margin-top:-1%;
+	margin-left:-1%;
+	margin-right:-1%;
+    list-style-type: none;
+  
+    padding: 0;
+    overflow: hidden;
+    background-color: maroon;
+	}
+	
+div#menu li {
+    float: left;	
+}
+div#menu li a {
+	font-size: 40px;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+}
+
+div#menu li a:hover {
+	
+    background-color: blue;
+}
+div#leftbar {
+	width:25%;
+	display:inline-block;
+	
+}
+div#content {
+	width:100%;
+	display:inline-block;
+	background-color: pink;
+	
+}
+
+#student{ color: blue;
+     width:70%;
+     font-size: 20px;
+	 margin-left:15%;
+	 font-weight: bold;}
+	 
+td{width:33.33%; }	 
+
+h1{font-weight: bold;}
+#home{ font-size: 30px;
+       color:blue;
+	   font-weight: bold;
+       margin-left:5%;}
+	   
+#about{ 
+font-weight: bold;
+font-size: 30px;
+       color:blue;
+       margin-left:5%;}
+	   
+	   
+thead{ font-size:27px;}
+
+body{ background-image:url("http://wallpapercave.com/wp/j7c1FtS.jpg");
+      background-size:cover;
+}
+
+img{
+    -moz-animation: spinHorizontal 17.0s infinite linear;
+    -o-animation: spinHorizontal 17.0s infinite linear;    
+    -webkit-animation: spinHorizontal 17.0s infinite linear;
+    animation: spinHorizontal 17.0s infinite linear;
+}
+
+@keyframes spinHorizontal {
+    0% { transform: rotateY(0deg); }
+    100% { transform: rotateY(360deg); }
+}
