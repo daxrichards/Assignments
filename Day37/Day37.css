@@ -1,0 +1,62 @@
+#outer{ 
+
+margin-top:10%;
+  padding-top: 7px;
+ width:80%;
+ margin-left:10%;
+ padding-left:21%;
+
+ 
+ }
+ 
+ span{
+	 font-size: 20px;
+	 font-weight: bold;
+	 
+ }
+ body{
+	 background-image: url("https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQGfpTXn8n0CyvFAekFiFUrQk9ZRqb_UeAReokV0Widmues06CK");
+ background-size: 50%;
+background-repeat: no-repeat;
+background-position: 107% -117%; 
+   
+	}
+h1{margin-left:23%;
+    font-weight: bold;}
+
+label{ font-size: 30px;}
+
+input{
+	height:40px;
+   width: 27%;
+padding-left:7px; 
+font-size: 20px;
+font-weight: bold;  }
+
+button{ margin-left:15.7%;
+font-size: 17px;
+font-weight: bold;
+
+}
+
+.spin{ 
+     animation: 1.0s rotateRight linear; 
+	 
+}
+
+
+
+#top{
+	position: absolute;
+	
+ top: 25%;
+ left: 13%;
+ margin: -50px auto 0;
+}
+@keyframes rotateRight{
+    0%{ transform:rotate(0deg); transform-origin:50% 50%; }
+    100%{ transform:rotate(360deg); }
+}
+
+
+

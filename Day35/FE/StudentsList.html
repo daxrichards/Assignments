@@ -19,7 +19,7 @@
 			var fullname = data[i].first_name + " " + data[i].last_name;
 			var urlId = "http://localhost:8080/student" ;
             var id = data[i].id;
-            var item = $("<tr><td>" + "<a href='singleStudent.html?id=" + data[i].id +"'>" + fullname + "</a>" + "</td><td>" + data[i].sat + "</td><td>" + data[i].gpa.toFixed(2) + "</td></tr>");
+            var item = $("<tr><td>" + "<a href='singleStudent.html?id=" + data[i].id +"'>" + fullname + "</a>" + "</td><td>" + data[i].sat + "</td><td>" + data[i].gpa.toFixed(2) + "</td><td><button type='button' class='btn btn-default btn-lg'><span class='glyphicon glyphicon-pencil' aria-hidden='true'></span> Edit </button></td><td><button type='button' class='btn btn-default btn-lg'><span class='glyphicon glyphicon-trash' aria-hidden='true'></span> Delete</button></td></tr>");
                                 <!--  <a href="url">link text</a> data[i].first_name + " " + data[i].last_name -->
         
       $("#list").append( item );
@@ -36,9 +36,10 @@
 	<header><img src= "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtDeucZSSAJg-yK7d_DZF_6XvjLq7B6Eh1ygeSYoaAQc6bCnD4" /> &nbsp Student List</header>
 </head>
 <body>
-<table  id="list"  >
+<div>
+<table  class = "table" id="list"  >
 </table>
-
+</div>
 
 
 </body>

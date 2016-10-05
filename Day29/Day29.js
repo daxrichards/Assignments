@@ -1,11 +1,8 @@
 
 $(document).ready(function(){
 
+
 var token = getSlackToken();
-
-
-
-
 
    
 	$.ajax("https://slack.com/api/channels.list?",{
