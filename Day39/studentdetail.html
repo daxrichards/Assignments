@@ -1,0 +1,26 @@
+<div id ="student">
+<h1>Student Detail</h1>
+<h2>This is the student detail page for <font color="maroon" >{{ctrl.student.first_name}} {{ctrl.student.last_name}} ID = {{ctrl.student.id}} </font></h2>
+<table class = "table table-striped" id ="st">
+	<tr>
+		<td>ID:</td>
+		<td ng-bind="ctrl.student.id"></td>
+	</tr>
+	<tr>
+		<td>FIRST NAME:</td>
+		<td ng-bind="ctrl.student.first_name"></td>
+	</tr>
+	<tr>
+		<td>LAST NAME:</td>
+		<td ng-bind="ctrl.student.last_name"></td>
+	</tr>
+	<tr>
+		<td>SAT:</td>
+		<td ng-bind="ctrl.student.sat"></td>
+	</tr>
+	<tr>
+		<td>GPA:</td>
+		<td ng-bind="ctrl.student.gpa"></td>
+	</tr>
+</table>
+</div>
